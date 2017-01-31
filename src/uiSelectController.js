@@ -739,6 +739,8 @@ uis.controller('uiSelectCtrl',
     angular.element($window).off('resize', onResize);
   });
 
+  $scope.$on('updateUISelectSize', ctrl.sizeSearchInput);
+
   $scope.$watch('$select.activeIndex', function(activeIndex) {
     if (activeIndex)
       $element.find('input').attr(
